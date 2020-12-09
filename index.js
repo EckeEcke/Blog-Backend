@@ -96,9 +96,7 @@ app.listen(port, function(){
     console.log("express is running")
 });
 
-app.get("/", function(req, res){
-    res.send("something happens")
-});
+
 
 app.get("/", function(req, res){
     console.log(req);
