@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
+
 
 let unsortedEntries = [
     {
@@ -88,7 +91,7 @@ let unsortedEntries = [
 
 let Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
 
-
+app.use(cors());
 
 app.use(bodyParser.json());
 
