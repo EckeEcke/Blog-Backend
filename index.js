@@ -96,6 +96,8 @@ let unsortedEntries = [
 
 let Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
 
+app.use(express.json());
+
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -112,6 +114,8 @@ app.get("/", function(req, res){
     console.log(res.json(Entries));
 });
 
-app.post("/New", function(req, res){
+app.post("/new", function(req, res){
+    req.body;
     console.log(req.body);
+    res.send("got post request");
 })
