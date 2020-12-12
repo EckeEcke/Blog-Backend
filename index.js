@@ -114,6 +114,4 @@ app.get("/", function(req, res){
 
 app.post("/New", function(req, res){
     console.log(req.body);
-    unsortedEntries.push(req.body);
-    Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
 })
