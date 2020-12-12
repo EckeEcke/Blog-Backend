@@ -115,9 +115,26 @@ app.get("/", function(req, res){
 });
 
 app.post("/new", function(req, res){
-    req.body;
+    let post = req.body.data;
     console.log(req.body);
-    unsortedEntries.push(req.body);
+    let lng = parseInt(post.lng);
+    let lat = parseInt(post.lat);
+    let postdate = new Date().getFullYear()+'-'+("0"+(new Date().getMonth()+1)).slice(-2)+'-'+("0"+new Date().getDate()).slice(-2);
+    let newEntry = {
+        image: post.image, 
+        title: post.title, 
+        portrait: post.portrait, 
+        date: post.date, 
+        author: post.author, 
+        postdate: postdate,
+        country: post.country,
+        city: post.city,
+        lat: lat,
+        lng: lng,
+        description: post.description,
+    }
+
+    unsortedEntries.push(newEntry);
     Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
     res.send("got post request");
 })
