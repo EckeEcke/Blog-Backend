@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const router = express.Router();
 const port = process.env.PORT;
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -113,7 +112,3 @@ app.get("/", function(req, res){
     console.log(res.json(Entries));
 });
 
-router.post("/New", function(req, res){
-    console.log(req.body);
-    res.end("yes");
-})
