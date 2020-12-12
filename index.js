@@ -6,6 +6,11 @@ const cors = require("cors");
 
 
 
+
+
+
+
+
 let unsortedEntries = [
     {
     image:"https://1thingtodo.de/wp-content/uploads/2016/02/barcelona-reisebericht-1-thing-to-do.jpg", 
@@ -106,3 +111,9 @@ app.get("/", function(req, res){
     res.json(Entries);
     console.log(res.json(Entries));
 });
+
+app.post("/New", function(req, res){
+    console.log(req.body);
+    unsortedEntries.push(req.body);
+    Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
+})
