@@ -112,3 +112,6 @@ app.get("/", function(req, res){
     console.log(res.json(Entries));
 });
 
+app.post("/New", funcrtion(req, res){
+    console.log(req);
+})
