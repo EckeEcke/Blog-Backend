@@ -120,10 +120,22 @@ app.post("/new", function(req, res){
     let lng = parseInt(post.lng);
     let lat = parseInt(post.lat);
     let postdate = new Date().getFullYear()+'-'+("0"+(new Date().getMonth()+1)).slice(-2)+'-'+("0"+new Date().getDate()).slice(-2);
+    let portrait = "https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png";
+    let image = "https://jugendbildungsmesse.de/wp-content/uploads/2017/07/jugendbildungsmesse-work-and-travel-reisen.jpg";
+
+    if (post.portrait.length > 1){
+        portrait = post.portrait;
+    };
+    
+    if (post.image.length > 1){
+        image = post.image.length;
+    };
+    
+
     let newEntry = {
-        image: post.image, 
+        image: image, 
         title: post.title, 
-        portrait: post.portrait, 
+        portrait: portrait, 
         date: post.date, 
         author: post.author, 
         postdate: postdate,
