@@ -27,7 +27,7 @@ let unsortedEntries = [
     },
     {
     image:"https://savorylens.com/wp-0463a-content/uploads/2018/01/Prag-45.jpg", 
-    title:"My Trip to Prague", 
+    title:"Exploring Prague", 
     portrait: "https://i.pinimg.com/564x/ce/2a/95/ce2a95e99faceaf7af19c273b10ebcc1.jpg", 
     date:"2019-08-10", 
     author:"Chris P Chicken", 
@@ -36,11 +36,11 @@ let unsortedEntries = [
     city:"Prague",
     lat:50.075538,
     lng:14.437800,
-    description:"This is some text about my trip to Prague. We had a great time, weather was nice, tasty food and beautiful city."  
+    description:"This is some text about my trip to Prague. We had a great time, weather was nice, tasty food and beautiful city. And here is some more text for demonstration."  
     },
     {
     image: "https://www.logistik-watchblog.de/images/2018/03/shutterstock_139999093-1.jpg", 
-    title:"My Trip to London", 
+    title:"Weekend in London", 
     portrait: "https://www.finetoshine.com/wp-content/uploads/2020/07/Lisa-Simpson-aesthetic-profile-pic.jpg", 
     date:"2020-01-18", 
     author:"Chris P Bacon", 
@@ -49,11 +49,11 @@ let unsortedEntries = [
     city:"London",
     lat:51.507351,
     lng:-0.127758,
-    description:"This is some text about my trip to London. We had a great time, weather was nice, tasty food and beautiful city."  
+    description:"This is some text about my trip to London. We had a great time, weather was nice, tasty food and beautiful city. People driving on the left, fish and chips, visiting pubs and all that stuff."  
     },
     {
     image: "https://lovingnewyork.de/wp-content/uploads/2017/05/New-York-Kreuzfahrt2-1600x960.jpg", 
-    title:"My Trip to New York", 
+    title:"New York! New York!", 
     portrait: "https://www.finetoshine.com/wp-content/uploads/2020/07/Lisa-Simpson-aesthetic-profile-pic.jpg", 
     date:"2018-05-11", 
     author:"Chris P Bacon", 
@@ -62,7 +62,7 @@ let unsortedEntries = [
     city:"New York",
     lat:40.712784,
     lng:-74.005941,
-    description:"This is some text about my trip to New York. We had a great time, weather was nice, tasty food and beautiful city."  
+    description:"This is some text about my trip to New York. We had a great time, weather was nice, tasty food and beautiful city. Hamburgers, NY style pizza and some hot dogs. And Statue of Liberty of course."  
     },
     {
     image: "https://sothebys-com.brightspotcdn.com/dims4/default/d3e659c/2147483647/strip/true/crop/989x711+0+0/resize/684x492!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2Fc8%2Fa6%2Fd51cd4424ab699c8f3dbdb38bed2%2Fmoscow-russia-tech-center.jpg",
@@ -88,7 +88,7 @@ let unsortedEntries = [
     city:"Kairo",
     lat:30.044420,
     lng:31.235712,
-    description:"This is some text about my trip to Kairo. We had a great time, weather was nice, tasty food and beautiful city."      
+    description:"This is some text about my trip to Kairo. We had a great time, weather was nice, tasty food and beautiful city. Seeing pyramids, riding on camels. And some other stuff."      
     }
 
 ]
