@@ -123,6 +123,8 @@ app.post("/new", function(req, res){
     let portrait = "https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png";
     let image = "https://jugendbildungsmesse.de/wp-content/uploads/2017/07/jugendbildungsmesse-work-and-travel-reisen.jpg";
 
+    const apiKey = "AIzaSyDvHy67yTF3tzca1j83n5NWsrq1BxGLZjo";
+
     if (post.portrait.length > 1){
         portrait = post.portrait;
     };
@@ -131,22 +133,32 @@ app.post("/new", function(req, res){
         image = post.image.length;
     };
     
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${post.city}&key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => 
+            lat = data.results.geometry.location.lat;
+            lng = data.results.geometry.location.lng)
+        .then(
+            let newEntry = {
+                image: image, 
+                title: post.title, 
+                portrait: portrait, 
+                date: post.date, 
+                author: post.author, 
+                postdate: postdate,
+                country: post.country,
+                city: post.city,
+                lat: lat,
+                lng: lng,
+                description: post.description,
+            }
+        
+            unsortedEntries.push(newEntry);
+            Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
+            res.send("got post request");
+        )
 
-    let newEntry = {
-        image: image, 
-        title: post.title, 
-        portrait: portrait, 
-        date: post.date, 
-        author: post.author, 
-        postdate: postdate,
-        country: post.country,
-        city: post.city,
-        lat: lat,
-        lng: lng,
-        description: post.description,
-    }
 
-    unsortedEntries.push(newEntry);
-    Entries = unsortedEntries.sort((a, b) => new Date(b.date).getTime() -  new Date(a.date).getTime());
-    res.send("got post request");
+
+    
 })
