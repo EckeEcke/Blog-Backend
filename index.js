@@ -117,8 +117,8 @@ app.get("/", function(req, res){
 app.post("/new", function(req, res){
     let post = req.body.data;
     console.log(req.body);
-    let lng = parseInt(post.lng);
-    let lat = parseInt(post.lat);
+    let lng = post.lng;
+    let lat = post.lat;
     let postdate = new Date().getFullYear()+'-'+("0"+(new Date().getMonth()+1)).slice(-2)+'-'+("0"+new Date().getDate()).slice(-2);
     let portrait = "https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png";
     let image = "https://jugendbildungsmesse.de/wp-content/uploads/2017/07/jugendbildungsmesse-work-and-travel-reisen.jpg";
